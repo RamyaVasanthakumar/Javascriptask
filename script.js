@@ -1,7 +1,7 @@
 //to findout pine apple is present in an array
 let arrfruits = ['apple','banana','mango','pineapple'];
-b=arrfruits.includes('pineapple')
-console.log(b)
+let foundElement=arrfruits.includes('pineapple')
+console.log(foundElement)
 
 //to findout fibonacci series upto 100
 let range=100;
@@ -44,7 +44,8 @@ console.log("temperature in Fahrenheit:",tempFahrenheit);
 let string1="AchieversIt"
 console.log(string1.includes('v'));
 
- 
-
+//find first element and last element
+let arr = [23,34,45,456,567,567]; 
+console.log(arr.shift(),arr.pop());
 
 
