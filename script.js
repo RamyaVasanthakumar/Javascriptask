@@ -1,51 +1,42 @@
-//to findout pine apple is present in an array
-let arrfruits = ['apple','banana','mango','pineapple'];
-let foundElement=arrfruits.includes('pineapple')
-console.log(foundElement)
+let signupButton = document.getElementById("submit");
+signupButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log(event)
 
-//to findout fibonacci series upto 100
-let range=100;
-let n1=0, n2=1;
-nextnum=n1+n2;
-while(nextnum<=range)
-{
-    console.log(nextnum);
-    n1=n2;
-    n2=nextnum;
-    nextnum=n1+n2;
-}
+    let firstName = document.getElementById("firstName");
+    let lastName = document.getElementById("lastName");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    validateForm(firstName,lastName,email,password);
+    //console.log(firstName.value,lastName.value,email.value,password.value
 
+    function validateForm(...params) {
+        let firstNameErr = document.getElementById("firstnameErr");
+        let lastNameErr = document.getElementById("lastnameErr");
+        let emailErr = document.getElementById("emailErr");
+        let passwordErr = document.getElementById("passwordErr");
+        let successMsg = document.getElementById("successMsg")
+        
+          if(firstName.value==""){
+              firstNameErr.innerText = "please enter your firstname";
+              firstNameErr.style.color = "red";
+            }
+          if(lastName.value==""){
+             lastNameErr.innerText="please enter the lastname";
+             lastNameErr.style.color="red";
+          }if(email.value==""){
+              emailErr.innerText="Please enter emailId";
+              emailErr.style.color="red";
+          }if(password.value==""){
+            passwordErr.innerText="Please enter password";
+            passwordErr.style.color="red";
+          }else{
+            successMsg.innerText="your response was successfully submitted"
+            successMsg.style.color="orange"
 
-//to check two numbers sum=50 or any one number=50
-let a=50,b=30;
-//let a=20,b=30;
-sum=a+b;
-if(sum===50)
-{
-    console.log("sume is 50 true");
-}else if(a=50)
-{
-    console.log("first number is 50");
-}else
-{
-   console.log("second number is 50");
-}
-
-
-//temperature in F to C and C to Fs
-let tempF=50;
-let tempC = ((tempF-32)*(5/9));
-console.log("temperature in celsisu:",tempC);
-let tempCelsius=10;
-let  tempFahrenheit=(tempCelsius*(9/5))+32
-console.log("temperature in Fahrenheit:",tempFahrenheit);
-
-//to check 'v' present in string
-let string1="AchieversIt"
-console.log(string1.includes('v'));
-
-//find first element and last element
-let arr = [23,34,45,456,567,567]; 
-console.log(arr.shift(),arr.pop());
+          }
+        
+    }
 
 
+});

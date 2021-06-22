@@ -1,0 +1,111 @@
+<!Doctype html>
+<head>
+<style>
+    
+input {
+    /* border: none; 
+    background-color: transparent; */
+    outline: none; 
+  
+    
+}
+
+#container {
+  margin: 5% auto; 
+  width: 800px;
+  height: auto;
+  background: rgb(42, 125, 146);
+  border-radius: 3px;
+}
+Form{
+  padding:80px; ;
+
+}
+input[type="text"],
+input[type="password"] {
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 5px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+}
+
+button[type="submit"] {
+  width: 120px;
+  height: 32px;
+  background: #0fc57f;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;  
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  opacity: 0.8;
+  
+}
+
+button[type="submit"]:active {
+  opacity: 1;
+ 
+} 
+
+</style>
+</head>
+<body>    
+<div id="container">
+  <Form>
+    <h2>SignUp Form</h2>
+    <label for="firstName"><b>FirstName</b></label>
+    <input 
+    type="text"
+    id="firstName"
+    name="firstname"
+    placeholder="firstname" >
+    <p id="firstnameErr" class="hide"></p>
+
+    <label for="lastname"><b>LastName</b></label>
+    <input type="text" 
+    id="lastName"
+    name="lastName"
+    placeholder="lastName">
+    <p id="lastnameErr" class="hide"></p>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text"
+     id="email"
+     name="email"
+     placeholder="Email">
+     <p id="emailErr" class="hide"></p>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password"
+    id="password"
+    name="password"
+    placeholder="password is required" >
+    <p id="passwordErr" class="hide"></p>
+
+    <p><b>Gender</b></p>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Male
+    </label>
+
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Female
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Others
+    </label><br /><br />
+    <button id="submit" type="submit" class="signupbtn">Sign Up</button>
+    <button type="submit" class="cancelbtn">Cancel</button>
+    <p id="successMsg" class="hide"></p>
+  </Form>
+</div>
+<script src="./script.js"></script>
+</body>        
+
+</html>
+  

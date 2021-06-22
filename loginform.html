@@ -1,0 +1,86 @@
+<!Doctype html>
+<head>
+<style>
+    
+input {
+    /* border: none; 
+    background-color: transparent; */
+    outline: none; 
+  
+    
+}
+
+#container {
+  margin: 5% auto; 
+  width: 500px;
+  height: auto;
+  background: lightgray;
+  border-radius: 3px;
+}
+Form{
+  padding:80px; ;
+
+}
+input[type="text"],
+input[type="password"] {
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 5px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+}
+
+button[type="submit"] {
+  width: 120px;
+  height: 32px;
+  background: green;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;  
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  opacity: 0.8;
+  
+}
+
+button[type="submit"]:active {
+  opacity: 1;
+ 
+} 
+
+</style>
+</head>
+<body>    
+<div id="container">
+  <Form>
+    <h2>Login Form</h2>
+    <label for="email"><b>Email</b></label>
+    <input 
+     type="text"
+     id="email"
+     name="email"
+     placeholder="Email">
+     <p id="emailErr" class="hide"></p>
+
+    <label for="password"><b>Password</b></label>
+    <input 
+    type="password"
+    id="password"
+    name="password"
+    placeholder="password is required" >
+    <p id="passwordErr" class="hide"></p>
+    
+    <button id="submit" type="submit" class="signupbtn">Login</button>
+    <p id="successMsg" class="hide"></p>
+  </Form>
+</div>
+<script src="./loginscript.js"></script>
+</body>        
+
+</html>
+  
